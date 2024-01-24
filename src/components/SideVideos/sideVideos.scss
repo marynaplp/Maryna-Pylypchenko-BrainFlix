@@ -1,0 +1,48 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
+video {
+    width:100%;
+}
+.side-videos{
+    margin-top:1rem;
+    margin-left: $marginLeft;
+    margin-right:$marginRight;
+&__header{
+    font-size:0.75rem;
+    color:$silver;
+    line-height: 20px;
+    font-weight:700;
+}
+&__item{
+    display:flex;
+    align-items: flex-start;
+    margin-bottom:1rem;
+    margin-top:1rem;
+
+}
+&__image{
+    width:50%;
+    height:auto;
+    margin-right:$marginRight;
+    aspect-ratio: 16 / 9;
+    object-fit:cover;
+    border-radius: 4px
+
+}
+.side-videos__info{
+    .side-video__title {
+        margin:0;
+        font-size:0.9rem;
+        margin-bottom:0.25rem;
+        color:$brainflix-black;
+        font-weight: bold;
+        line-height: 18px;
+}
+.side-video__channel{
+    font-size:0.8rem;
+    color:$brainflix-black;;
+}
+}
+}
