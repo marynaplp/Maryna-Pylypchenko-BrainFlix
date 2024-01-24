@@ -1,0 +1,77 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
+*{
+font-family: "Avenir Next Pro Lt", sans-serif;
+}
+.comments{
+    &__block{
+        display:flex;
+        margin-left:$marginLeft;
+        .comment__avatar{
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-top: 1rem;
+            margin-right:$marginRight;
+           img{
+            width: 100%;
+            height: auto;
+           } 
+           
+        }
+        .comments__form{
+            display:flex;
+            flex-direction: column;
+            .comments__title{
+                color:$silver;
+                font-size:0.6rem;
+                font-weight: 700;
+                font-family:sans-serif;
+
+              
+            };
+            .comments__input{
+                border-radius:$borderRadius;
+                border: 1px solid $mercury;
+                background-color:$alabaster ;
+                width: 67vw;
+                height: 10vh;
+            }
+            #commentInput::placeholder{
+                color:$brainflix-black ;
+                font-size:0.6rem;
+                font-family: sans-serif;
+                padding-top:5px;
+
+            }
+            .comments__button{
+                margin-top:16px;
+                width:100%;
+                padding:12px;
+               // margin:0 0 12px 12px;
+                background-color:$brainFlix-Blue;
+                color:$white;
+                font-family:sans-serif;
+                border:none;
+                border-radius:$borderRadius;
+                background-image: url(../../Assets/Icons/add_comment.svg);
+                background-repeat: no-repeat;
+                background-repeat: no-repeat;
+                background-position: 10px center;
+                background-size: 20px;
+                padding-left: 32px;
+                font-weight:bold;
+            }
+        }
+    }
+    .comments__divider{
+        @include divider-style(90vw);
+        margin-left:$marginLeft;
+        margin-right:$marginRight;
+        margin-top:1rem;
+    }
+}
