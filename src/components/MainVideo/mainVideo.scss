@@ -21,6 +21,14 @@
     display:flex;
     justify-content: space-between;
     margin-left:$marginLeft;
+   
+  }
+  &__intro{
+    @include tablet {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
   }
   &__channel{
     font-weight:bold;
@@ -37,6 +45,9 @@
   &__date{
     font-size:1rem; 
     color:$silver;
+    @include tablet{
+      margin-left: 2rem;
+    }
   }
   &__divider{
     @include divider-style(80vw);
