@@ -4,22 +4,49 @@ import "./header.css";
 import { ReactComponent as BrainFlixLogo} from '../../Assets/Logo/BrainFlix-logo.svg';
 import userAvatar from "../../Assets/Images/Mohan-muruge.jpg"
 
-const Header=()=> {
-    return (
-      <header className="header">
-      <BrainFlixLogo className="header__logo" />
-      <div className ="header__description">
-        <div className="header__searchSection">
+const Header = () => {
+  return (
+    <header className="header">
+      <Logo />
+      <div className="header__main">
+        <Search />
+        <ProfilePicture />
+      </div>
+      <div className="header__features">
+        <UploadButton />
+        <ProfilePictureTab />
+      </div>
+    </header>
+  );
+};
 
-        <input type="search" placeholder="Search" className="header__search" />
-        </div>
-        <div className="header__avatar">
-        <img src={userAvatar} alt="User Avatar" className="header__avatar-image" />        </div>
-        </div>
-        <button className="header__upload-btn">UPLOAD</button>
+const Logo = () => (
+  <div className="header__image">
+    <BrainFlixLogo alt="Brainflix-logo" className="header__logo" />
+  </div>
+);
 
-      </header>
-    );
-  }
+const Search = () => (
+  <div className="header__form">
+    <input type="search" placeholder="Search" className="header__search" />
+  </div>
+);
 
-  export default Header;
+const UploadButton = () => <button className="header__button"> Upload</button>;
+
+const ProfilePicture = () => (
+  <img
+    src={userAvatar}
+    alt="Mohan"
+    className="header__profile-picture"></img>
+);
+
+
+const ProfilePictureTab = () => (
+  <img
+    src={userAvatar}
+    alt="Mohan"
+    className="header__profile-picture-tab"></img>
+);
+
+export default Header;
