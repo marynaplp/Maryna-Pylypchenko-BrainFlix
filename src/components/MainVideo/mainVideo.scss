@@ -1,0 +1,95 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/typograghy" as *;
+
+
+
+.main-video{
+  &__player {
+    width: 100%; 
+    height: auto;
+  }
+  &__title{
+    margin-left:$marginLeft;
+    margin-right:$marginRight;
+    font-size:1.5rem;
+    color:$brainflix-black;
+
+  }
+  &__information{
+    display:flex;
+    justify-content: space-between;
+    margin-left:$marginLeft;
+   
+  }
+  &__intro{
+    @include tablet {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  &__channel{
+    font-weight:bold;
+    color:$brainflix-black;
+  }
+  &__description{
+    font-size:1rem; 
+    font-family:sans-serif;
+    color:$brainflix-black;
+    margin-left:$marginLeft;
+    margin-right:$marginRight;
+
+  }
+  &__date{
+    font-size:1rem; 
+    color:$silver;
+    @include tablet{
+      margin-left: 2rem;
+      
+    }
+    @include desktop{
+      margin-left: 2rem;
+    }
+  }
+  &__divider{
+    @include divider-style(80vw);
+    &:nth-child(2){
+      @include tablet {
+        display: none;
+      }
+      @include desktop{
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+.main-video__details{
+  @include tablet{
+    display:flex;
+  }
+  @include desktop{
+    display:flex;
+  }
+  .main-video__views, 
+  .main-video__likes {
+    margin-right:$marginRight;
+    
+    .main-video__viewIcon,
+    .main-video__likeIcon{
+      margin-right:10px;
+    }
+  }
+
+}
