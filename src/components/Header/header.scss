@@ -30,7 +30,7 @@
         margin: 1rem 0;
 
         @include desktop {
-          width: 100%;
+          width: 50%;
           height: 29px;
           margin-right: auto;
           margin-top: 9px;
@@ -74,7 +74,7 @@
           @include desktop {
             min-width: 200px;
             position: absolute;
-            left: 10rem;
+            left: 8rem;
             top: -1.72rem;
           }
         }

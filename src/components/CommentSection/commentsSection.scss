@@ -77,13 +77,16 @@ font-family: "Avenir Next Pro Lt", sans-serif;
                 width: 67vw;
                 height: 10vh;
                 @include tablet{
-           
                 width: 60vw;
                 height: 7vh;
-         
-                margin-right: 5px;
-                                  
+                margin-right: 5px;                  
                 }
+                @include desktop{
+                    width: 60vw;
+                    height: 7vh;
+                    margin-right: 5px;                  
+                }
+                
             }
             #commentInput::placeholder{
                 color:$brainflix-black ;
@@ -116,6 +119,7 @@ font-family: "Avenir Next Pro Lt", sans-serif;
                 }
                 @include desktop{
                     width: 15%;
+                    margin-top:0;
                 }
             }
         }

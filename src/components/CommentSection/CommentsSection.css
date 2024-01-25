@@ -94,6 +94,13 @@ body {
     margin-right: 5px;
   }
 }
+@media (min-width: 1280px) {
+  .comments__block .comments__form .comments__input {
+    width: 60vw;
+    height: 7vh;
+    margin-right: 5px;
+  }
+}
 .comments__block .comments__form #commentInput::-moz-placeholder {
   color: #323232;
   font-size: 0.6rem;
@@ -132,6 +139,7 @@ body {
 @media (min-width: 1280px) {
   .comments__block .comments__form .comments__button {
     width: 15%;
+    margin-top: 0;
   }
 }
 .comments .comments__divider {
