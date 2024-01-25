@@ -5,10 +5,11 @@
 video {
     width:100%;
 }
-.side-videos{
+ .side-videos{
     margin-top:1rem;
     margin-left: $marginLeft;
     margin-right:$marginRight;
+    
     @include tablet{
         margin-left: 24px;
         margin-right:24px;
