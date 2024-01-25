@@ -7,9 +7,31 @@ body {
   font-family: "Avenir Next Pro Lt", sans-serif;
 }
 
+.comments__title {
+  color: #AFAFAF;
+  font-size: 0.6rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-left: 26%;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__title {
+    margin-left: 12%;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__title {
+    margin-left: 12%;
+  }
+}
 .comments__block {
   display: flex;
   margin-left: 16px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__block {
+    height: 2.75rem;
+  }
 }
 .comments__block .comment__avatar {
   flex-shrink: 0;
@@ -20,6 +42,18 @@ body {
   margin-top: 1rem;
   margin-right: 16px;
 }
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__block .comment__avatar {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__block .comment__avatar {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
 .comments__block .comment__avatar img {
   width: 100%;
   height: auto;
@@ -28,11 +62,23 @@ body {
   display: flex;
   flex-direction: column;
 }
-.comments__block .comments__form .comments__title {
-  color: #AFAFAF;
-  font-size: 0.6rem;
-  font-weight: 700;
-  font-family: sans-serif;
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__block .comments__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__block .comments__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 .comments__block .comments__form .comments__input {
   border-radius: 4px;
@@ -40,6 +86,13 @@ body {
   background-color: #FAFAFA;
   width: 67vw;
   height: 10vh;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__block .comments__form .comments__input {
+    width: 60vw;
+    height: 7vh;
+    margin-right: 5px;
+  }
 }
 .comments__block .comments__form #commentInput::-moz-placeholder {
   color: #323232;
@@ -69,6 +122,17 @@ body {
   background-size: 20px;
   padding-left: 32px;
   font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .comments__block .comments__form .comments__button {
+    width: 25%;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__block .comments__form .comments__button {
+    width: 15%;
+  }
 }
 .comments .comments__divider {
   margin: 0 auto;

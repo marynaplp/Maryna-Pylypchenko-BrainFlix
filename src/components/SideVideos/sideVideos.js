@@ -2,7 +2,7 @@ import "./sideVideos.css";
 
 const SideVideos=({videos, mainVideoId })=>{
     return (
-    <div className="side-videos">
+    <section className="side-videos">
       <div class="side-videos__header">NEXT VIDEO</div>
       {videos.filter(video => video.id !== mainVideoId).map(filteredVideo => (
         <div key={filteredVideo.id} className="side-videos__item">
@@ -13,7 +13,7 @@ const SideVideos=({videos, mainVideoId })=>{
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 
 }
