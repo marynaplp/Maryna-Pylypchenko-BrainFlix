@@ -6,6 +6,9 @@
 font-family: "Avenir Next Pro Lt", sans-serif;
 }
 .comments{
+    @include desktop{
+       margin-top:36px;
+    }
     &__title{
         color:$silver;
         font-size:0.6rem;
@@ -16,7 +19,8 @@ font-family: "Avenir Next Pro Lt", sans-serif;
             margin-left:12%;
         }
         @include desktop{
-            margin-left:12%;
+            margin-left:16%;
+            margin-bottom: 0;
         }
 
 
@@ -27,6 +31,9 @@ font-family: "Avenir Next Pro Lt", sans-serif;
         margin-left:$marginLeft;
         @include tablet{
             height: 2.75rem;
+        }
+        @include desktop{
+            margin-left:9%;
         }
         .comment__avatar{
             flex-shrink: 0;
@@ -67,7 +74,7 @@ font-family: "Avenir Next Pro Lt", sans-serif;
                display:flex;
                flex-direction:row; 
                align-items: center;  
-               justify-content: space-evenly;             
+               justify-content: space-around;             
             }
            
             .comments__input{
@@ -82,9 +89,8 @@ font-family: "Avenir Next Pro Lt", sans-serif;
                 margin-right: 5px;                  
                 }
                 @include desktop{
-                    width: 60vw;
-                    height: 7vh;
-                    margin-right: 5px;                  
+                    width: 50vw;
+                    height: 5vh;
                 }
                 
             }
@@ -129,5 +135,9 @@ font-family: "Avenir Next Pro Lt", sans-serif;
         margin-left:$marginLeft;
         margin-right:$marginRight;
         margin-top:1rem;
+        @include desktop{
+            margin-left:80px;
+            margin-right: 0;
+          }
     }
 }

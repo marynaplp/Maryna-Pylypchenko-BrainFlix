@@ -31,6 +31,11 @@ body {
   width: 100%;
   display: flex;
 }
+@media (min-width: 1280px) {
+  .header__image {
+    justify-content: flex-start;
+  }
+}
 .header__image .header__logo {
   width: 100%;
   height: 29px;
@@ -40,7 +45,7 @@ body {
   .header__image .header__logo {
     width: 50%;
     height: 29px;
-    margin-right: auto;
+    margin-right: 24px;
     margin-top: 9px;
   }
 }
@@ -86,7 +91,7 @@ body {
   .header__main .header__form .header__search {
     min-width: 200px;
     position: absolute;
-    left: 8rem;
+    left: 11rem;
     top: -1.72rem;
   }
 }
@@ -122,6 +127,7 @@ body {
 @media (min-width: 768px) and (max-width: 1279px) {
   .header__features .header__profile-picture-tab {
     margin-left: 1rem;
+    margin-right: 24px;
     display: block;
     width: 2.5rem;
     height: 2.5rem;
@@ -131,6 +137,7 @@ body {
 @media (min-width: 1280px) {
   .header__features .header__profile-picture-tab {
     margin-left: 1rem;
+    margin-right: 24px;
     display: block;
     width: 2.5rem;
     height: 2.5rem;
@@ -161,7 +168,7 @@ body {
 }
 @media (min-width: 1280px) {
   .header__features .header__button {
-    height: 9vh;
-    width: 35%;
+    height: 6vh;
+    width: 25%;
   }
 }/*# sourceMappingURL=header.css.map */

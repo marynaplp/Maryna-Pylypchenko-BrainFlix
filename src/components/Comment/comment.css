@@ -29,6 +29,11 @@ body {
 .default-comments__block {
   display: flex;
 }
+@media (min-width: 1280px) {
+  .default-comments__block {
+    margin-left:7%;
+  }
+}
 .default-comments__avatar {
   flex-shrink: 0;
   width: 50px;
@@ -64,6 +69,12 @@ body {
   height: 1px;
   background-color: #E1E1E1;
   margin-right: 16px;
+}
+@media (min-width: 1280px) {
+  .default-comments__divider {
+  margin-right:0;
+  margin-left:80px;
+  }
 }
 .default-comments__text {
   margin-top: 0;

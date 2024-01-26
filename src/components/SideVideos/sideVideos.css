@@ -48,7 +48,7 @@ video {
 }
 @media (min-width: 1280px) {
   .side-videos__image {
-    width: 14%;
+    width: 25%;
     margin-right: 24px;
   }
 }

@@ -3,10 +3,12 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/typograghy" as *;
 
-
 .default-comments {
     &__block {
         display: flex;
+        @include desktop{
+           margin-left:7%;
+        }
     }
 
     &__avatar {
@@ -49,6 +51,10 @@
     &__divider {
         @include divider-style();
         margin-right: $marginRight;
+        @include desktop{
+            margin-right: 0;
+            margin-left: 80px
+          }
     }
 
     &__text {
