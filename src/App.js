@@ -14,10 +14,12 @@ function App() {
   useEffect(()=>{
     setVideos(videosData);
     const initialMainVideo=videoDetailsData.find(detail =>detail.id === videosData[0].id) 
-   // console.log("Main video set:", initialMainVideo);
     setMainVideo(initialMainVideo)
   }, [])
-
+const handleVideoSelect=(videoId)=>{
+const selectVideo =videoDetailsData.find(video => video.id === videoId)
+setMainVideo(selectVideo)
+}
   return (
     <div>
       <Header />
@@ -28,6 +30,7 @@ function App() {
           mainVideo={mainVideo}
           sideVideos={videos}
           comments={mainVideo.comments}
+          onVideoSelect={handleVideoSelect}
         />
       }
 

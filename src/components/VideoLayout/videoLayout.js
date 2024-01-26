@@ -4,7 +4,7 @@ import SideVideos from "../SideVideos/sideVideos";
 import CommentsSection from "../CommentSection/CommentsSection";
 import './videoLayout.css';
 
-const VideoLayout =({mainVideo, sideVideos, comments})=>{
+const VideoLayout =({mainVideo, sideVideos, comments, onVideoSelect})=>{
     return(
     <div className="video-layout">
         <div className="video-layout__main">
@@ -13,7 +13,7 @@ const VideoLayout =({mainVideo, sideVideos, comments})=>{
         </div>
         <div className="video-layout__divider"></div>
 <div className ="video-layout__sidebar">
-    <SideVideos videos={sideVideos} mainVideoId ={mainVideo.id} />
+    <SideVideos videos={sideVideos} mainVideoId ={mainVideo.id} onVideoSelect={onVideoSelect} />
 </div>
     </div>
     )
