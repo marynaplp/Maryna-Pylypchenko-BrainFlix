@@ -1,40 +1,27 @@
 import './App.css';
-import React,{useState, useEffect} from "react"
+import React,{useState, useEffect} from "react";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import Header from './components/Header/Header';
-import MainVideo from './components/MainVideo/mainVideo';
+import Home from "./Pages/Home";
+import VideoDetailsPage from './Pages/VideoDetailsPage';
+import VideoUpload from './Pages/VideoUploadPage';
 
-import VideoLayout from './components/VideoLayout/videoLayout';
-import videoDetailsData from "./Data/video-details.json";
-import videosData from "./Data/videos.json";
 
 function App() {
-  const [videos, setVideos] = useState([]);
-  const [mainVideo, setMainVideo]=useState(null);
 
-  useEffect(()=>{
-    setVideos(videosData);
-    const initialMainVideo=videoDetailsData.find(detail =>detail.id === videosData[0].id) 
-    setMainVideo(initialMainVideo)
-  }, [])
-const handleVideoSelect=(videoId)=>{
-const selectVideo =videoDetailsData.find(video => video.id === videoId)
-setMainVideo(selectVideo)
-}
   return (
-    <div>
-      <Header />
-      {mainVideo && <MainVideo video={mainVideo} />}
-      
-      {mainVideo && 
-        <VideoLayout
-          mainVideo={mainVideo}
-          sideVideos={videos}
-          comments={mainVideo.comments}
-          onVideoSelect={handleVideoSelect}
-        />
-      }
 
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/video/:videoId" component={VideoDetailsPage}></Route>
+          <Route path="/upload" component={VideoUpload}></Route>
+
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

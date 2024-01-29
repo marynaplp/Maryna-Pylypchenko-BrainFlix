@@ -1,5 +1,5 @@
-import react from "react"
-
+import react from "react";
+import {Link} from "react-router-dom";
 import "./header.css";
 import { ReactComponent as BrainFlixLogo} from '../../Assets/Logo/BrainFlix-logo.svg';
 import userAvatar from "../../Assets/Images/Mohan-muruge.jpg"
@@ -21,9 +21,11 @@ const Header = () => {
 };
 
 const Logo = () => (
+  <Link to="/">
   <div className="header__image">
     <BrainFlixLogo alt="Brainflix-logo" className="header__logo" />
   </div>
+  </Link>
 );
 
 const Search = () => (
@@ -32,8 +34,10 @@ const Search = () => (
   </div>
 );
 
-const UploadButton = () => <button className="header__button"> Upload</button>;
-
+const UploadButton = () => 
+<Link to ="/upload">
+<button className="header__button"> Upload</button>;
+</Link> 
 const ProfilePicture = () => (
   <img
     src={userAvatar}
