@@ -28,10 +28,8 @@ const Home = () => {
     fetchAllVideos();
   }, []);
 
-  // Function to handle video selection
   const handleVideoSelect = async (videoId) => {
     try {
-      // Fetch details of the selected video
       const response = await axios.get(`${baseUrl}/videos/${videoId}?api_key=${apiKey}`);
       setMainVideo(response.data);
     } catch (error) {
