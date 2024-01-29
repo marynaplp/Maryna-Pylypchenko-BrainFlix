@@ -1,11 +1,10 @@
 import react from "react";
-import Header from "../../components/Header/Header"
 import "./videoUpload.css"
 
 const VideoUpload=()=>{
  return(
   <div className="video-upload">
-  <Header />
+
   
   <main className="video-upload__main">
     <h1 className="video-upload__title">Upload Video</h1>

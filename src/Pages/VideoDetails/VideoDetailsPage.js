@@ -4,22 +4,30 @@ import axios from "axios";
 import MainVideo from "../../components/MainVideo/mainVideo";
 import VideoLayout from "../../components/VideoLayout/videoLayout";
 
+const baseUrl ="https://project-2-api.herokuapp.com"
+const apiKey ="b805ee35-d867-433e-ae3e-5d300727a840";
 const VideoDetailsPage=()=>{
-
+ 
     const {videoId} =useParams ();
-    const [video, setVideo]=useState(null)
+    const [videoDetails, setVideoDetails]=useState(null)
     //fetch data
-    useEffect = () =>{
-
-    }
+    useEffect(() => {
+        const fetchVideosDetails = async () => {
+          const response = await axios.get(`${baseUrl}/videos?api_key=${apiKey}`)
+          setVideoDetails(response.data);
+    
+        };
+    
+        fetchVideosDetails();
+      }, [videoId]);
 
     return (
         <div>
-        {video && <MainVideo video={video} /> }
+         <MainVideo video={videoDetails} /> 
         <VideoLayout 
-        mainVideo={video}
-        sideVideos={video}// fetch or flter 
-        comments={video?.comments}
+        mainVideo={videoDetails}
+        sideVideos={videoDetails}
+        comments={videoDetails.comments}
         />
         </div>
     )
