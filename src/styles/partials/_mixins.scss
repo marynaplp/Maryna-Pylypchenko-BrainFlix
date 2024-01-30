@@ -19,3 +19,18 @@
     height: 1px;
     background-color: #E1E1E1;;
    } 
+   @mixin common-button-styles {
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+    background-color:  #0095FF;
+    color: #000;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+    padding-left: 32px;
+    text-transform: uppercase;
+  }

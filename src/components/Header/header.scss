@@ -141,21 +141,9 @@
       }
   
       .header__button {
-        width:100%;
-        padding:12px;
-        margin:0;
-        background-color:$brainFlix-Blue;
-        color:$white;
-        font-family:sans-serif;
-        border:none;
-        border-radius:$borderRadius;
+        @include common-button-styles;
         background-image: url(../../Assets/Icons/upload.svg);
-        background-repeat: no-repeat;
-        background-repeat: no-repeat;
-        background-position: 10px center;
-        background-size: 20px;
-        padding-left: 32px;
-        text-transform: uppercase;
+        color:$white;
         @include tablet {
          
         }
