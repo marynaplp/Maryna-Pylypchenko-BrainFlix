@@ -10,12 +10,13 @@ const Header = () => {
       <Logo />
       <div className="header__main">
         <Search />
-        <ProfilePicture />
-      </div>
-      <div className="header__features">
+    
+        <div className="header__features">
         <UploadButton />
         <ProfilePictureTab />
       </div>
+      </div>
+     
     </header>
   );
 };
@@ -31,19 +32,18 @@ const Logo = () => (
 const Search = () => (
   <div className="header__form">
     <input type="search" placeholder="Search" className="header__search" />
+    <img
+    src={userAvatar}
+    alt="Mohan"
+    className="header__profile-picture"></img>
   </div>
 );
 
 const UploadButton = () => 
 <Link to ="/upload">
-<button className="header__button"> Upload</button>;
+<button className="header__button"> Upload</button>
 </Link> 
-const ProfilePicture = () => (
-  <img
-    src={userAvatar}
-    alt="Mohan"
-    className="header__profile-picture"></img>
-);
+
 
 
 const ProfilePictureTab = () => (

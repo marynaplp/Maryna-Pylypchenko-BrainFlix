@@ -8,12 +8,19 @@ const VideoLayout =({mainVideo, sideVideos, comments, onVideoSelect})=>{
     return(
     <div className="video-layout">
         <div className="video-layout__main">
-            <MainVideoDetails video={mainVideo} />
-            <CommentsSection comments={comments} />
+            <MainVideoDetails 
+            video={mainVideo} />
+            <CommentsSection 
+            comments={comments} />
         </div>
         <div className="video-layout__divider"></div>
 <div className ="video-layout__sidebar">
-    <SideVideos videos={sideVideos} mainVideoId ={mainVideo.id} onVideoSelect={onVideoSelect} />
+{mainVideo &&
+    <SideVideos 
+    videos={sideVideos} 
+    mainVideoId ={mainVideo.id} 
+    onVideoSelect={onVideoSelect} />
+}
 </div>
     </div>
     )

@@ -12,7 +12,7 @@ const MainVideoDetails =({video})=>{
         <div className="main-video__information">
         <div className="main-video__intro ">
         <p className="main-video__channel"> By {video.channel}</p>
-        <p className="main-video__date">  {new Date(video.timestamp).toLocaleDateString('en-US', {
+        <p className="main-video__date">  {new Date(Number(video.timestamp)).toLocaleDateString('en-US', {
        day: '2-digit',
     month: '2-digit',
     year: 'numeric',
