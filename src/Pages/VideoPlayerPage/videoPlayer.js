@@ -6,7 +6,7 @@ import VideoLayout from "../../components/VideoLayout/videoLayout";
 
 const baseUrl ="https://project-2-api.herokuapp.com"
 const apiKey ="b805ee35-d867-433e-ae3e-5d300727a840";
-const VideoDetailsPage=()=>{
+const VideoPlayer=()=>{
  
     const {videoId} =useParams ();
     const [videoDetails, setVideoDetails]=useState(null)
@@ -23,14 +23,14 @@ const VideoDetailsPage=()=>{
 
     return (
         <div>
-         <MainVideo video={videoDetails} /> 
+         <MainVideo video={videoDetails.mainVideo} /> 
         <VideoLayout 
-        mainVideo={videoDetails}
-        sideVideos={videoDetails}
+        mainVideo={videoDetails.mainVideo}
+        sideVideos={videoDetails.sideVideos}
         comments={videoDetails.comments}
         />
         </div>
     )
 
 }
-export default VideoDetailsPage;
+export default VideoPlayer;

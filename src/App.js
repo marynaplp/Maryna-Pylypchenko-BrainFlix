@@ -2,7 +2,7 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Header from './components/Header/Header';
 import Home from "./Pages/Home/Home";
-import VideoDetailsPage from './Pages/VideoDetails/VideoDetailsPage';
+import VideoPlayerPage from './Pages/VideoPlayerPage/videoPlayer';
 import VideoUpload from './Pages/VideoUpload/VideoUploadPage';
 
 
@@ -14,7 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/video/:videoId" element={<VideoDetailsPage />} />
+          <Route path="/video/:videoId" element={<VideoPlayerPage />} />
           <Route path="/upload" element={<VideoUpload />} />
         </Routes>
       </div>
