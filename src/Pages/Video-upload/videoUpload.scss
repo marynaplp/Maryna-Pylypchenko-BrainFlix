@@ -34,6 +34,7 @@
                 display: block;
                 margin-left: 80px;
                 margin-right: 80px;
+            
             }
         }
 
@@ -63,13 +64,17 @@
         flex-direction: column;
 
         @include desktop {
-            flex-direction: row;
-            justify-content: space-between;
+           display:block;
             margin-bottom: 24px;
         }
     }
 
-    &__thumbnail-section {
+    .video-upload__inputs{
+        @include desktop {
+            display:flex;
+            justify-content: space-between;
+        }
+        .video-upload__thumbnail-section {
         width: 100%;
 
         @include desktop {
@@ -115,7 +120,7 @@
         }
     }
 
-    &__sections {
+    .video-upload__section {
         @include desktop {
             display: flex;
             flex-direction: column;
@@ -171,7 +176,7 @@
             }
         }
     }
-
+    }
     .video-upload__buttons {
         display: flex;
         justify-content: space-between;
@@ -250,7 +255,7 @@
     }
 }
 
-div.video-upload__main1>div.video-upload__divider {
+#root > div > section > main > form > div.video-upload__divider {
     display: none;
 
     @include tablet {

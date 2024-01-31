@@ -92,38 +92,36 @@ body {
   }
 }
 @media (min-width: 1280px) {
-  .video-upload .video-upload__inputs {
+  .video-upload__inputs {
     display: flex;
-    justify-content: space-between;
   }
 }
-.video-upload .video-upload__inputs .video-upload__thumbnail-section {
+.video-upload__inputs__thumbnail-section {
   width: 100%;
 }
 @media (min-width: 1280px) {
-  .video-upload .video-upload__inputs .video-upload__thumbnail-section {
-    width: 29% !important;
+  .video-upload__inputs__thumbnail-section {
     margin-left: 80px;
   }
 }
-.video-upload .video-upload__inputs .video-upload__thumbnail-section .video-upload__thumbnail__title {
+.video-upload__inputs__thumbnail-section .video-upload__thumbnail__title {
   font-size: 1rem;
   color: #AFAFAF;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .video-upload .video-upload__inputs .video-upload__thumbnail-section .video-upload__thumbnail__title {
+  .video-upload__inputs__thumbnail-section .video-upload__thumbnail__title {
     margin-top: 36px;
   }
 }
 @media (min-width: 1280px) {
-  .video-upload .video-upload__inputs .video-upload__thumbnail-section .video-upload__thumbnail__title {
+  .video-upload__inputs__thumbnail-section .video-upload__thumbnail__title {
     margin-top: 36px;
     width: 50%;
   }
 }
-.video-upload .video-upload__inputs .video-upload__thumbnail-section .video-upload__thumbnail {
+.video-upload__inputs__thumbnail-section .video-upload__thumbnail {
   background-image: url("../../Assets/Images/Upload-video-preview.jpg");
   height: 46vh;
   width: 89vw;
@@ -132,19 +130,19 @@ body {
   border-radius: 4px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .video-upload .video-upload__inputs .video-upload__thumbnail-section .video-upload__thumbnail {
+  .video-upload__inputs__thumbnail-section .video-upload__thumbnail {
     width: 100%;
     background-size: contain;
   }
 }
 @media (min-width: 1280px) {
-  .video-upload .video-upload__inputs .video-upload__thumbnail-section .video-upload__thumbnail {
+  .video-upload__inputs__thumbnail-section .video-upload__thumbnail {
     width: 100%;
     height: 70%;
   }
 }
 @media (min-width: 1280px) {
-  .video-upload .video-upload__inputs .video-upload__section {
+  .video-upload__inputs__sections {
     display: flex;
     flex-direction: column;
     width: 56%;
@@ -152,10 +150,10 @@ body {
     margin-right: 80px;
   }
 }
-.video-upload .video-upload__inputs .video-upload__section .video-upload__field {
+.video-upload__inputs__sections .video-upload__field {
   margin-right: 16px;
 }
-.video-upload .video-upload__inputs .video-upload__section .video-upload__field .video__title {
+.video-upload__inputs__sections .video-upload__field .video__title {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
@@ -163,12 +161,12 @@ body {
   margin-top: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .video-upload .video-upload__inputs .video-upload__section .video-upload__field .video__title {
+  .video-upload__inputs__sections .video-upload__field .video__title {
     margin-top: 2rem;
   }
 }
-.video-upload .video-upload__inputs .video-upload__section .video-upload__field input,
-.video-upload .video-upload__inputs .video-upload__section .video-upload__field textarea {
+.video-upload__inputs__sections .video-upload__field input,
+.video-upload__inputs__sections .video-upload__field textarea {
   width: 96%;
   padding: 10px;
   border: 1px solid #E1E1E1;
@@ -177,12 +175,12 @@ body {
   line-height: 1.5;
 }
 @media (min-width: 1280px) {
-  .video-upload .video-upload__inputs .video-upload__section .video-upload__field input,
-  .video-upload .video-upload__inputs .video-upload__section .video-upload__field textarea {
+  .video-upload__inputs__sections .video-upload__field input,
+  .video-upload__inputs__sections .video-upload__field textarea {
     height: auto;
   }
 }
-.video-upload .video-upload__inputs .video-upload__section .video-upload__field .video__description {
+.video-upload__inputs__sections .video-upload__field .video__description {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
@@ -190,11 +188,11 @@ body {
   margin-top: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .video-upload .video-upload__inputs .video-upload__section .video-upload__field .video__description {
+  .video-upload__inputs__sections .video-upload__field .video__description {
     margin-top: 2rem;
   }
 }
-.video-upload .video-upload__inputs .video-upload__section .video-upload__field textarea {
+.video-upload__inputs__sections .video-upload__field textarea {
   height: 41%;
   resize: vertical;
 }
@@ -313,20 +311,22 @@ body {
   }
 }
 
-#root > div > section > main > form > div.video-upload__divider {
+div.video-upload__main1 > div.video-upload__divider {
   display: none;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  #root > div > section > main > form > div.video-upload__divider {
+  div.video-upload__main1 > div.video-upload__divider {
     display: block;
     margin-top: 24px;
   }
 }
 @media (min-width: 1280px) {
-  #root > div > section > main > form > div.video-upload__divider {
+  div.video-upload__main1 > div.video-upload__divider {
     display: block;
     margin-top: 24px;
     margin-right: 80px;
     margin-left: 80px;
   }
-}/*# sourceMappingURL=videoUpload.css.map */
+}
+
+/*# sourceMappingURL=videoUpload.css.map */
