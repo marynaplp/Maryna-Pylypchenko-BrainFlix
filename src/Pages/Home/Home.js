@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState, useEffect } from 'react';
 import MainVideo from "../../components/MainVideo/mainVideo";
 import VideoLayout from "../../components/VideoLayout/videoLayout";
-import CommentsSection from "../../components/CommentSection/CommentsSection";
 
 const baseUrl ="https://project-2-api.herokuapp.com"
 const apiKey ="b805ee35-d867-433e-ae3e-5d300727a840";
