@@ -6,7 +6,8 @@ import VideoLayout from "../../components/VideoLayout/videoLayout";
 
 const baseUrl ="https://project-2-api.herokuapp.com"
 const apiKey ="b805ee35-d867-433e-ae3e-5d300727a840";
-const VideoPlayer=()=>{
+
+const VideoDetails=()=>{
  
     const {videoId} =useParams ();
     const [videoDetails, setVideoDetails]=useState(null)
@@ -33,4 +34,4 @@ const VideoPlayer=()=>{
     )
 
 }
-export default VideoPlayer;
+export default VideoDetails;

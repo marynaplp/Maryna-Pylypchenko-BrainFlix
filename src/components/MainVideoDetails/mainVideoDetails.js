@@ -3,6 +3,15 @@ import "./mainVideoDetails.css"
 import likeIcon from "../../Assets/Icons/likes.svg";
 import viewIcon from "../../Assets/Icons/views.svg"
 const MainVideoDetails =({video})=>{
+  
+  const formatDate = (timestamp) => {
+    return new Date(timestamp).toLocaleDateString("en-US",  {
+      day: '2-digit',
+   month: '2-digit',
+   year: 'numeric',
+
+ });
+  };
     return(
         <>
         <section className="main-video">
@@ -12,12 +21,7 @@ const MainVideoDetails =({video})=>{
         <div className="main-video__information">
         <div className="main-video__intro ">
         <p className="main-video__channel"> By {video.channel}</p>
-        <p className="main-video__date">  {new Date(Number(video.timestamp)).toLocaleDateString('en-US', {
-       day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
- 
-  })} </p>
+        <p className="main-video__date">   {formatDate(video.timestamp)} </p>
   </div>
 
   <div class="main-video__details">

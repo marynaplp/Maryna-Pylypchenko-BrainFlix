@@ -5,6 +5,8 @@ import CommentsSection from "../CommentSection/CommentsSection";
 import './videoLayout.css';
 
 const VideoLayout =({mainVideo, sideVideos, comments, onVideoSelect})=>{
+    console.log("Comments in VideoLayout:", comments);
+
     return(
     <div className="video-layout">
         <div className="video-layout__main">

@@ -1,6 +1,13 @@
 import "./sideVideos.css";
+import React from "react";
+import { useNavigate } from "react-router-dom"
 
-const SideVideos=({videos, mainVideoId, onVideoSelect })=>{
+const SideVideos=({videos, mainVideoId})=>{
+  const navigate = useNavigate();
+
+  const onVideoSelect = videoId => {
+    navigate(`/video/${videoId}`); 
+  };
     return (
     <section className="side-videos">
       <div class="side-videos__header">NEXT VIDEO</div>

@@ -6,7 +6,7 @@ import commentAvatar from "../../Assets/Images/Mohan-muruge.jpg"
 
 const CommentsSection=({ comments }) =>{
   const safeComments = comments || [];
-
+  console.log('Comments:', safeComments)
     return (
       <section className="comments">
                     <p className="comments__title">JOIN THE CONVERSATION</p>
@@ -26,7 +26,12 @@ const CommentsSection=({ comments }) =>{
 
         <div className="comments__list">
          {safeComments.map(comment => (
-            <Comment key={comment.id} {...comment} />
+           <Comment
+           key={comment.id}
+           name={comment.name}
+           timestamp={comment.timestamp}
+           comment={comment.comment}
+         />
          ))} 
         </div>
       </section>
